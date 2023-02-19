@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private val suggestions = arrayOf("Item1", "Item2", "Item3", "Item4", "Item5", "Item6", "Item7", "Item8" )  //импровизированная база данных для возможности выбрать из списка
 
-    private lateinit var mAdapter: SimpleCursorAdapter  //адаптер, который будет помагать осущесвлять предложения по поиску
+    private lateinit var mAdapter:  SimpleCursorAdapter//адаптер, который будет помагать осущесвлять предложения по поиску
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -123,7 +123,7 @@ class MainActivity : AppCompatActivity() {
                 return false
             }
         })
-        searchView.suggestionsAdapter = mAdapter
+        searchView.suggedapter = mAdapter as SimpleCursorAdapter
 
         searchView.setOnSuggestionListener(object: SearchView.OnSuggestionListener {
             override fun onSuggestionSelect(position: Int): Boolean {
